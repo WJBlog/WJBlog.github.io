@@ -243,6 +243,117 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/12/Binary-heap和BSTs的比较/" itemprop="url">
+                  Binary heap和BSTs的比较
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-12T19:56:42+08:00" content="2016-05-12">
+              2016-05-12
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>BSTs中AVL tree和red-black tree都比较平衡，性能比较好<br>在下面四个操作中，两者(binary heap，平衡的BST)的复杂度都一样</p>
+<ol>
+<li>Get Top Priority Element (Get minimum or maximum)        O(1)</li>
+<li>Insert an element                                        O(logn)</li>
+<li>Remove top priority element                              O(logn)</li>
+<li>Decrease Key                                             O(logn)<br><a href="http://geeksquiz.com/how-to-implement-decrease-key-or-change-key-in-binary-search-tree/" target="_blank" rel="external">AVL, red-black tree的删除节点O(logn)的方法</a></li>
+</ol>
+<h2 id="Binary-heap的优点"><a href="#Binary-heap的优点" class="headerlink" title="Binary heap的优点"></a>Binary heap的优点</h2><ol>
+<li>用数组存储，易于更好的定位，也容易缓存</li>
+<li>尽管复杂度相同，但Binary heap的系数更小，速度更快</li>
+<li>Binary heap更容易实现</li>
+<li>构建一个Binary heap的复杂度是O(n)，而构建一个BSTs的复杂度是O(nlogn)(见下图)</li>
+</ol>
+<h2 id="BSTs的优势"><a href="#BSTs的优势" class="headerlink" title="BSTs的优势"></a>BSTs的优势</h2><ol>
+<li>平衡的BST，查找元素的复杂度是O(Logn)， Binary heap是O(n).(没法用二分查找)</li>
+<li>排序一个BST只需要O(n)，但Binary heap需要O(nlogn)</li>
+</ol>
+<p>注：构建Binary heap，，复杂度是O(n)<br><img src="/2016/05/12/Binary-heap和BSTs的比较/p1.png" alt="p1.png" title=""><br>其复杂度<br>自底向上，即7-》1，h为树的长度，x为当前节点的层数，例如1-》x＝1，7-》x＝3，13-》x＝4<br>4-7这层只需要和最下面一层（第4层）比较，这一层的比较次数为 2^(3-1)<em>1－》2^(x-1)</em>(h-x)<br>所以总共复杂度S为：x从1到h，2^(x-1)*(h-x)的总和<br>易知S=2^h × 1 - h +1 ~= n</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/10/hello-world/" itemprop="url">
                   Hello World
                 </a>
@@ -365,7 +476,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
